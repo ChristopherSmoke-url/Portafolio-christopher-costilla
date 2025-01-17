@@ -1,0 +1,1000 @@
+/* Configuraciones básicas */
+
+:root {
+    --color-destaque-principal: #284894;
+    --color-destaque-secundario: #ffffff;
+    --color-de-texto-base: #313131;
+    --color-destaque-terciario: #ffefd5;
+
+    --fondo-opcional: #ffffff;
+
+    --fondo-predeterminado: linear-gradient(135deg, #3D6EE0, #3A6AD8, #3159B6, #3159B6, #1F3872, #162750);
+}
+
+body {
+    background-image: var(--fondo-predeterminado);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 500%;
+    animation: fanimado 7s infinite;
+    max-height: fit-content;
+    min-height: 100vh;
+    max-width: 100%;
+    min-width: 320px;
+
+    font-family: "Lexend", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.6;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+/* Fondo de pantalla animado */
+
+@keyframes fanimado {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.5rem 4rem 1.5rem 4rem;
+}
+
+.cabecera__titulo {
+    font-size: calc(1.2vw + .6em);
+    
+    color: var(--color-destaque-secundario);
+
+    cursor:context-menu;
+}
+
+.navegacion__lista {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: calc(1.2vw + 0.01em);
+}
+
+a {
+    color: var(--color-destaque-secundario);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+
+.presentacion {
+    background-color: var(--fondo-opcional);
+
+    padding: 1.5rem 9rem;
+    margin: 0rem 3rem;
+
+    border-radius: 3%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.presentacion__contenedor__primario {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 0rem;
+}
+
+.presentacion__titulo {
+    font-size: calc(1.2vw + 1.6em);
+    color: var(--color-de-texto-base);
+
+    cursor: context-menu;
+}
+
+.presentacion__titulo--destaque1 {
+    color: var(--color-destaque-principal);
+    text-decoration: underline;
+}
+
+.presentacion__titulo--destaque1:hover {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.presentacion__titulo--destaque2 {
+    color: var(--color-destaque-principal);
+    text-decoration: underline;
+}
+
+.presentacion__titulo--destaque2:hover {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.presentacion__titulo--destaque3 {
+    color: var(--color-destaque-principal);
+    text-decoration: underline;
+}
+
+.presentacion__titulo--destaque3:hover {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.presentacion__subtitulo {
+    color: var(--color-destaque-principal);
+    font-size: calc(1.2vw + .15em);
+
+    padding-right: 10rem;
+
+    cursor: context-menu;
+}
+
+.presentacion__foto {
+    width: 20rem;
+    border-radius: 50%;
+    padding: 6rem 0rem;
+}
+
+.presentacion__logo__proyecto {
+    width: 20rem;
+}
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+
+.sobre-mi {
+    background-color: var(--fondo-opcional);
+
+    padding: 2rem 9rem 3rem 9rem;
+    margin: 5rem 0rem 0rem 0rem;
+
+    border-width: 3rem;
+    border-color: var(--color-destaque-principal);
+    border-style: inset;
+}
+
+.sobre-mi__titulo {
+    font-size: calc(1.2vw + .6em);
+    color: var(--color-de-texto-base);
+}
+
+.sobre-mi__titulo:hover {
+    text-decoration: underline;
+    color: var(--color-destaque-principal);
+
+    cursor: context-menu;
+}
+
+.sobre-mi__texto {
+    font-size: calc(1.2vw + .15em);
+    color: var(--color-destaque-principal);
+
+    cursor: context-menu;
+}
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+
+.habilidades {
+    color: var(--color-destaque-secundario);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5rem 5rem 0rem 5rem;
+}
+
+.habilidades__titulo{
+    display: flex;
+    align-items: center;
+
+    font-size: calc(1.2vw + .6em);
+}
+
+.habilidades__titulo:hover {
+    text-decoration: underline;
+    color: var(--color-destaque-terciario);
+
+    cursor:context-menu;
+}
+
+.habilidades__lista {
+    display: flex;
+    gap: 3rem;
+
+    padding: 0.5rem 10rem 2rem 10rem;
+}
+
+.habilidades__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--color-destaque-principal);
+    background-color: var(--fondo-opcional);
+
+    padding: 1.5rem;
+    width: 15rem;
+
+    border-radius: 10%;
+    border-style: inset;
+
+    transition: .5s ease all;
+}
+
+.habilidades__elemento:hover {
+    color: var(--color-destaque-principal);
+    background-color: var(--color-destaque-terciario);
+
+    width: 20rem;
+
+    transition: .5s ease all;
+}
+
+.habilidades__icono {
+    width: 5rem;
+    padding: 1rem 0rem;
+}
+
+.habilidades__nombre {
+    font-size: calc(1.2vw + .15em);
+
+    cursor: context-menu;
+}
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+
+.aficiones {
+    color: var(--color-destaque-secundario);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0rem 5rem 5rem 5rem;
+}
+
+.aficiones__titulo {
+    display: flex;
+    align-items: center;
+
+    font-size: calc(1.2vw + .6em);
+}
+
+.aficiones__titulo:hover {
+    text-decoration: underline;
+    cursor:context-menu;
+    color: var(--color-destaque-terciario);
+}
+
+.aficiones__lista {
+    display: flex;
+    gap: 2rem;
+
+    padding: 0.5rem 10rem 2rem 10rem;
+}
+
+.aficiones__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--color-destaque-principal);
+    background-color: var(--fondo-opcional);
+
+    padding: 1.5rem;
+    width: 18rem;
+
+    border-radius: 10%;
+    border-style: inset;
+
+    transition: .5s ease all;
+}
+
+.aficiones__elemento:hover {
+    color: var(--color-destaque-principal);
+    background-color: var(--color-destaque-terciario);
+
+    width: 22rem;
+
+    transition: .5s ease all;
+}
+
+.aficiones__elemento h4 {
+    font-size: calc(1.2vw + .15em);
+
+    cursor: context-menu;
+}
+
+.aficiones__icono {
+    width: 5rem;
+    padding: 1rem 0rem;
+}
+
+.aficiones__nombre {
+    font-size: calc(1.2vw + -0.2em);
+    text-align: center;
+
+    cursor: context-menu;
+}
+
+/*------------------------------ Sección de Formación académica --------------------------------*/
+
+.formacion {
+    background-color: var(--fondo-opcional);
+    color: var(--color-destaque-principal);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 3rem 5rem;
+}
+
+.formacion__titulo {
+    display: flex;
+    align-items: center;
+
+    font-size: calc(1.2vw + .6em);
+}
+
+.formacion__titulo:hover {
+    text-decoration: underline;
+
+    cursor: context-menu;
+}
+
+.formacion__lista {
+    display: flex;
+    gap: 2rem;
+
+    padding: 0.5rem 10rem 2rem 10rem;
+}
+
+.formacion__elemento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--color-destaque-secundario);
+    background-color: var(--color-destaque-principal);
+
+    padding: 1.5rem;
+    width: 18rem;
+
+    border-radius: 10%;
+    border-style: inset;
+
+    transition: .5s ease all;
+}
+
+.formacion__elemento:hover {
+    width: 22rem;
+
+    transition: .5s ease all;
+}
+
+.formacion__icono--coursera {
+    width: 15rem;
+    padding: 2.6rem 0rem;
+}
+
+.formacion__icono--alura {
+    width: 10rem;
+    padding: 1rem;
+}
+
+.formacion__icono--uade {
+    width: 16rem;
+    padding: 1.7rem 0rem;
+}
+
+.formacion__nombre {
+    font-size: calc(1.2vw + -0.2em);
+    text-align: center;
+
+    cursor: context-menu;
+}
+
+.formacion__detalle {
+    font-size: calc(1.2vw + -0.35em);
+    text-align: center;
+
+    cursor: context-menu;
+}
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+
+.proyectos {
+    background-color: var(--color-destaque-principal);
+    color: var(--color-destaque-secundario);
+
+    padding: 2rem 3rem 6rem 3rem;
+
+    border-width: 3rem;
+    border-color: var(--color-destaque-secundario);
+    border-style: inset;
+    
+    text-align: center;
+}
+
+.proyectos__titulo {
+    font-size: calc(1.2vw + .6em);
+}
+
+.proyectos__titulo:hover {
+    text-decoration: underline;
+    color: var(--color-destaque-terciario);
+
+    cursor: context-menu;
+}
+
+.proyectos__contenedor {
+    display: flex;
+    gap: 2rem;
+}
+
+.proyectos__imagen--encriptador {
+    width: 60rem;
+
+    border-style: inset;
+    border-width: 1rem;
+    border-color: var(--color-destaque-principal);
+
+    transition: .2s ease all
+}
+
+.proyectos__imagen--encriptador:hover {
+    border-color: var(--color-destaque-terciario);
+
+    transition: .2s ease all
+}
+
+.proyectos__informacion {
+    align-content: center;
+}
+
+.proyectos__nombre {
+    font-size: calc(1.2vw + 0.3em);
+
+    cursor: context-menu;
+}
+
+.proyectos__descripcion {
+    font-size: calc(1.2vw + .15em);
+
+    cursor: context-menu;
+}
+
+.proyectos__botones {
+    display: flex;
+    gap: 2rem;
+
+    padding: 3rem 0rem 0rem 0rem;
+}
+
+.proyectos__boton {
+    background-color: var(--color-destaque-secundario);
+    color: var(--color-destaque-principal);
+
+    text-align: center;
+    font-size: calc(1.2vw + .15em);
+    font-family: "Lexend", serif;
+
+    cursor: pointer;
+
+    border-radius: 3%;
+    border-color: var(--color-destaque-principal);
+    border-width: 0.5rem;
+
+    width: 15rem;
+    height: 5rem;
+
+    transition: .2s ease all;
+
+    
+}
+
+.proyectos__boton:hover {
+    transition: .2s ease all;
+
+    background-color: var(--color-destaque-principal);
+    color: var(--color-destaque-secundario);
+
+    border-color: var(--color-destaque-secundario);
+}
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+
+.contacto {
+    background-color: var(--fondo-opcional);
+    color: var(--color-destaque-principal);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem 5rem 4rem 5rem;
+}
+
+.contacto__titulo {
+    display: flex;
+    align-items: center;
+
+    font-size: calc(1.2vw + .6em);
+}
+
+.contacto__titulo:hover {
+    text-decoration: underline;
+
+    cursor: context-menu;
+}
+
+.contacto__descripcion:hover {
+    cursor: context-menu;
+}
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: 2rem 3rem;
+}
+
+.contacto__campo {
+    color: var(--color-de-texto-base);
+    background-color: var(--color-destaque-terciario);
+
+    font-size: calc(1.2vw + -0.2em);
+    font-family: "Lexend", serif;
+    line-height: 2rem;
+
+    border-radius: 3%;
+    border-width: 0.3rem;
+    border-color: var(--color-destaque-principal);
+    border-style: inset;
+
+    height: 0.2rem;
+    padding: 2rem;
+
+    outline: none;
+    resize: none;
+}
+
+.contacto__campo--textarea {
+    color: var(--color-de-texto-base);
+    background-color: var(--color-destaque-terciario);
+
+    font-size: calc(1.2vw + -0.2em);
+    font-family: "Lexend", serif;
+    line-height: 2rem;
+
+    border-radius: 3%;
+    border-width: 0.3rem;
+    border-color: var(--color-destaque-principal);
+    border-style: inset;
+    
+    height: 12rem;
+    padding: 1.5rem 2rem;
+
+    outline: none;
+    resize: none;
+}
+
+.contacto__boton {
+    background-color: var(--color-destaque-principal);
+    color: var(--color-destaque-secundario);
+
+    text-align: center;
+    font-size: calc(1.2vw + .15em);
+    font-family: "Lexend", serif;
+
+    cursor: pointer;
+
+    border-radius: 3%;
+    border-color: var(--color-destaque-secundario);
+    border-width: 0.5rem;
+
+    width: 50rem;
+    height: 6rem;
+
+    transition: .2s ease all;
+}
+
+.contacto__boton:hover {
+    transition: .2s ease all;
+
+    background-color: var(--color-destaque-secundario);
+    color: var(--color-destaque-principal);
+
+    border-color: var(--color-destaque-principal);
+}
+
+/*------------------------------ Footer ---------------------------------*/
+
+footer {
+    background-color: var(--color-destaque-principal);
+
+    padding: 0.5rem;
+
+    border-style: inset;
+    border-width: 1rem;
+    border-color: var(--color-destaque-principal);
+}
+
+.copyright {
+    color: var(--color-destaque-secundario);
+
+    text-align: center;
+    font-size: calc(1.2vw + -0.35em);
+}
+
+.copyright:hover {
+    cursor: context-menu;
+}
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Pantallas chicas */
+
+@media (max-width: 360px) {
+
+    /* ------------------------------ Sección Menú -------------------------------*/
+
+    .cabecera {
+        padding: 0.5rem 2rem 0.5rem 2rem;
+
+        justify-content: center;
+    
+        background-color: var(--fondo-opcional);
+    }
+
+    .navegacion {
+        display: none;
+    }
+
+    .cabecera__titulo {
+        font-size: calc(1.2vw + .65em);
+        color: var(--color-destaque-principal);
+        text-align: center;
+    }
+
+    /* ------------------------------ Sección Presentación ------------------------------*/
+
+    .presentacion {
+        padding: 1rem 1rem;
+        margin: 2rem 2rem;
+
+        border-radius: 0%;
+
+        flex-direction: column;
+    }
+
+    .presentacion__contenedor__primario {
+        padding: 0rem;
+    }
+
+    .presentacion__titulo {
+        font-size: calc(1.2vw + 1.0em);
+    }
+
+    .presentacion__subtitulo {
+        font-size: calc(1.2vw + .6em);
+
+        padding-right: 2rem;
+    }
+
+    .presentacion__foto {
+        display: none;
+    }
+
+    .presentacion__logo__proyecto {
+        width: 10rem;
+    }
+
+    /* ------------------------------ Sección sobre mí ----------------------------------*/
+
+    .sobre-mi {
+        padding: 1rem 2rem 2rem 2rem;
+        margin: 0rem;
+
+        border-width: 1.5rem;
+    }
+
+    .sobre-mi__titulo {
+        font-size: calc(1.2vw + .8em);
+    }
+
+    .sobre-mi__texto {
+        font-size: calc(1.2vw + .5em);
+    }
+
+    /*------------------------------ Sección de Habilidades ------------------------------*/
+
+    .habilidades {
+        display: flex;
+        flex-direction: column;
+
+        padding: 1rem 2rem 0rem 2rem;
+    }
+
+    .habilidades__titulo{
+        font-size: calc(1.2vw + .8em);
+    }
+
+    .habilidades__lista {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        padding: 0.5rem 10rem 2rem 10rem;
+    }
+
+    .habilidades__elemento {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1.5rem;
+        width: 8rem;
+    }
+
+    .habilidades__elemento:hover {
+        width: 12rem;
+    }
+
+    .habilidades__icono {
+        width: 4rem;
+        padding: 0.5rem 0rem;
+    }
+
+    .habilidades__nombre {
+        font-size: calc(1.2vw + .75em);
+    }
+
+    /*------------------------------ Sección de Aficiones --------------------------------*/
+
+    .aficiones {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0rem 2rem 1rem 2rem;
+    }
+
+    .aficiones__titulo {
+        font-size: calc(1.2vw + .8em);
+    }
+
+    .aficiones__lista {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        padding: 0.5rem 10rem 2rem 10rem;
+    }
+
+    .aficiones__elemento {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1.5rem;
+        width: 12rem;
+    }
+
+    .aficiones__elemento:hover {
+        width: 16rem;
+    }
+
+    .aficiones__elemento h4 {
+        font-size: calc(1.2vw + .75em);
+        text-align: center;
+    }
+
+    .aficiones__icono {
+        width: 4rem;
+        padding: 0.5rem 0rem;
+    }
+
+    .aficiones__nombre {
+        font-size: calc(1.2vw + .6em);
+        text-align: center;
+    }
+
+    /*------------------------------ Sección de Formación académica --------------------------------*/
+
+    .formacion {
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem 2rem;
+    }
+
+    .formacion__titulo {
+        font-size: calc(1.2vw + .8em);
+    }
+
+    .formacion__lista {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        padding: 0.5rem 10rem 2rem 10rem;
+    }
+
+    .formacion__elemento {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1.5rem;
+        width: 16rem;
+    }
+
+    .formacion__elemento:hover {
+        width: 16rem;
+    }
+
+    .formacion__icono--coursera {
+        width: 11rem;
+        padding: 1rem 0rem;
+    }
+
+    .formacion__icono--alura {
+        width: 6rem;
+        padding: 0.5rem;
+    }
+
+    .formacion__icono--uade {
+        width: 12rem;
+        padding: 0.5rem 0rem;
+    }
+
+    .formacion__nombre {
+        font-size: calc(1.2vw + .75em);
+    }
+
+    .formacion__detalle {
+        font-size: calc(1.2vw + .6em);
+        text-align: center;
+    }
+
+    /*------------------------------ Sección de Proyectos --------------------------------*/
+
+    .proyectos {
+        padding: 1rem 1rem 2rem 1rem;
+
+        border-width: 1.5rem;
+    }
+
+    .proyectos__titulo {
+        font-size: calc(1.2vw + .8em);
+    }
+
+    .proyectos__contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .proyectos__imagen {
+        padding: 0rem;
+    }
+
+    .proyectos__imagen--encriptador {
+        width: 15rem;
+
+        border-width: 0.5rem;
+    }
+
+    .proyectos__informacion {
+        padding: 0rem;
+        margin: 0rem;
+    }
+
+    .proyectos__nombre {
+        font-size: calc(1.2vw + .8em);
+        margin: 0rem;
+    }
+
+    .proyectos__descripcion {
+        font-size: calc(1.2vw + .6em);
+    }
+
+    .proyectos__botones {
+        display: flex;
+        gap: 1rem;
+
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    .proyectos__boton {
+        font-size: calc(1.2vw + .6em);
+
+        width: 15rem;
+        height: 4rem;
+    }
+
+    /*------------------------------ Sección de Contacto ---------------------------------*/
+
+    .contacto {
+        padding: 1rem 2rem 1rem 2rem;
+    }
+
+    .contacto__titulo {
+        font-size: calc(1.2vw + .8em);
+    }
+
+    .contacto__formulario {
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+
+    .contacto__descripcion {
+        font-size: calc(1.2vw + .6em);
+        text-align: center;
+    }
+
+    .contacto__campo {
+        font-size: calc(1.2vw + .7em);
+        line-height: 1.5rem;
+
+        padding: 1.5rem;
+    }
+
+    .contacto__campo--textarea {
+        font-size: calc(1.2vw + .7em);
+        line-height: 1.5rem;
+        
+        height: 12rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .contacto__boton {
+        font-size: calc(1.2vw + .6em);
+
+        width: 15rem;
+        height: 4rem;
+
+    }
+
+    /*------------------------------ Footer ---------------------------------*/
+
+    footer {
+        padding: 0.2rem;
+    }
+
+    .copyright {
+        font-size: calc(1.2vw + .3em);
+    }
+}
